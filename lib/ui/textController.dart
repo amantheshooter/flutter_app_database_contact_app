@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappdatabasenewsapp/newsModel.dart';
-import 'package:flutterappdatabasenewsapp/todo_bloc.dart';
-import 'package:flutterappdatabasenewsapp/todo_repository.dart';
+import 'file:///D:/Flutter%20Projects/flutter_app_database_news_app/lib/repo/todo_repository.dart';
+import '../bloc/todo_bloc.dart';
+import '../model/newsModel.dart';
 
 // Define a custom Form widget.
 class MyCustomForm extends StatefulWidget {

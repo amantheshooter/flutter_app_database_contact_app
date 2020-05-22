@@ -1,8 +1,9 @@
-import 'package:flutterappdatabasenewsapp/todo_repository.dart';
 
 import 'dart:async';
 
-import 'newsModel.dart';
+import 'package:flutterappdatabasenewsapp/repo/todo_repository.dart';
+
+import '../model/newsModel.dart';
 
 class TodoBloc {
   //Get instance of the Repository

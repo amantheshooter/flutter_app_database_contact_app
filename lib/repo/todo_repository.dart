@@ -1,5 +1,6 @@
-import 'package:flutterappdatabasenewsapp/newsModel.dart';
-import 'package:flutterappdatabasenewsapp/todo_dao.dart';
+
+import '../dao/todo_dao.dart';
+import '../model/newsModel.dart';
 
 class TodoRepository {
   final todoDao = PersonDao();

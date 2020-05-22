@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'database.dart';
-import 'newsModel.dart';
+import '../database/database.dart';
+import '../model/newsModel.dart';
 
 class PersonDao {
   final dbProvider = DatabaseProvider.dbProvider;

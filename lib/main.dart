@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappdatabasenewsapp/textController.dart';
+import 'file:///D:/Flutter%20Projects/flutter_app_database_news_app/lib/ui/textController.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,11 +1,10 @@
 
 import 'dart:async';
 
-import 'package:flutterappdatabasenewsapp/repo/todo_repository.dart';
+import 'package:flutterappdatabasenewsapp/model/personModel.dart';
+import 'package:flutterappdatabasenewsapp/repo/contact_repository.dart';
 
-import '../model/newsModel.dart';
-
-class TodoBloc {
+class ContactBloc {
   //Get instance of the Repository
   final _todoRepository = TodoRepository();
 
@@ -17,7 +16,7 @@ class TodoBloc {
 
   get todos => _todoController.stream;
 
-  TodoBloc() {
+  ContactBloc() {
     getPerson();
   }
 

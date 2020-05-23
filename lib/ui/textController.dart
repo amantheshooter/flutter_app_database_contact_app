@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'file:///D:/Flutter%20Projects/flutter_app_database_news_app/lib/repo/todo_repository.dart';
-import '../bloc/todo_bloc.dart';
-import '../model/newsModel.dart';
+import 'package:flutterappdatabasenewsapp/bloc/contact_bloc.dart';
+import 'package:flutterappdatabasenewsapp/model/personModel.dart';
+import 'package:flutterappdatabasenewsapp/repo/contact_repository.dart';
 
 // Define a custom Form widget.
 class MyCustomForm extends StatefulWidget {
@@ -18,7 +18,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
   final mobileController = TextEditingController();
   TodoRepository repo = new TodoRepository();
   final landlineController = TextEditingController();
-  final TodoBloc todoBloc = TodoBloc();
+  final ContactBloc todoBloc = ContactBloc();
 
   @override
   void dispose() {

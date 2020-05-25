@@ -7,9 +7,9 @@ class PersonDao {
   final dbProvider = DatabaseProvider.dbProvider;
 
   //Adds new Person records
-  Future<int> createPerson(Person todo) async {
+  Future<int> createPerson(Person contact) async {
     final db = await dbProvider.database;
-    var result = db.insert(personTABLE, todo.toDatabaseJson());
+    var result = db.insert(personTABLE, contact.toDatabaseJson());
     return result;
   }
 
@@ -23,24 +23,24 @@ class PersonDao {
       if (query.isNotEmpty)
         result = await db.query(personTABLE,
             columns: columns,
-            where: 'description LIKE ?',
+            where: 'id LIKE ?',
             whereArgs: ["%$query%"]);
     } else {
       result = await db.query(personTABLE, columns: columns);
     }
 
-    List<Person> todos = result.isNotEmpty
+    List<Person> contacts = result.isNotEmpty
         ? result.map((item) => Person.fromDatabaseJson(item)).toList()
         : [];
-    return todos;
+    return contacts;
   }
 
   //Update Person record
-  Future<int> updatePerson(Person todo) async {
+  Future<int> updatePerson(Person contact) async {
     final db = await dbProvider.database;
 
-    var result = await db.update(personTABLE, todo.toDatabaseJson(),
-        where: "id = ?", whereArgs: [todo.id]);
+    var result = await db.update(personTABLE, contact.toDatabaseJson(),
+        where: "id = ?", whereArgs: [contact.id]);
 
     return result;
   }

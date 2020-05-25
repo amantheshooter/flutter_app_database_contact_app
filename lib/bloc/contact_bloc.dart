@@ -6,7 +6,7 @@ import 'package:flutterappdatabasenewsapp/repo/contact_repository.dart';
 
 class ContactBloc {
   //Get instance of the Repository
-  final _todoRepository = TodoRepository();
+  final _contactRepository = ContactRepository();
 
   //Stream controller is the 'Admin' that manages
   //the state of our stream of data like adding
@@ -14,7 +14,7 @@ class ContactBloc {
   //and broadcast it to observers/subscribers
   final _todoController = StreamController<List<Person>>.broadcast();
 
-  get todos => _todoController.stream;
+  get contacts => _todoController.stream;
 
   ContactBloc() {
     getPerson();
@@ -23,21 +23,21 @@ class ContactBloc {
   getPerson({String query}) async {
     //sink is a way of adding data reactively to the stream
     //by registering a new event
-    _todoController.sink.add(await _todoRepository.getAllTodos(query: query));
+    _todoController.sink.add(await _contactRepository.getAllContacts(query: query));
   }
 
   addPerson(Person todo) async {
-    await _todoRepository.insertTodo(todo);
+    await _contactRepository.insertContact(todo);
     getPerson();
   }
 
   updatePerson(Person todo) async {
-    await _todoRepository.updateTodo(todo);
+    await _contactRepository.updateContact(todo);
     getPerson();
   }
 
   deleteTodoById(int id) async {
-    _todoRepository.deleteTodoById(id);
+    _contactRepository.deleteContactById(id);
     getPerson();
   }
 

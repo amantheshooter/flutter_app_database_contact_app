@@ -1,17 +1,17 @@
 import 'package:flutterappdatabasenewsapp/dao/contact_dao.dart';
 import 'package:flutterappdatabasenewsapp/model/personModel.dart';
 
-class TodoRepository {
-  final todoDao = PersonDao();
+class ContactRepository {
+  final contactDao = PersonDao();
 
-  Future getAllTodos({String query}) => todoDao.getPerson(query: query);
+  Future getAllContacts({String query}) => contactDao.getPerson(query: query);
 
-  Future insertTodo(Person todo) => todoDao.createPerson(todo);
+  Future insertContact(Person contact) => contactDao.createPerson(contact);
 
-  Future updateTodo(Person todo) => todoDao.updatePerson(todo);
+  Future updateContact(Person contact) => contactDao.updatePerson(contact);
 
-  Future deleteTodoById(int id) => todoDao.deletePerson(id);
+  Future deleteContactById(int id) => contactDao.deletePerson(id);
 
   //We are not going to use this in the demo
-  Future deleteAllTodos() => todoDao.deleteAllPerson();
+  Future deleteAllContacts() => contactDao.deleteAllPerson();
 }

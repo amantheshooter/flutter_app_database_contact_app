@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappdatabasenewsapp/ui/textController.dart';
+import 'package:flutterappdatabasenewsapp/ui/homepage.dart';
+import 'package:flutterappdatabasenewsapp/ui/MyCustomForm.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Retrieve Text Input',
-      home: MyCustomForm(),
+      home: HomePage(),
+//      home: MyCustomForm(),
     );
   }
 }

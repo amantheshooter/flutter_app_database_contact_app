@@ -10,18 +10,18 @@ class Person {
 
   //When using curly braces { } we note dart that
   //the parameters are optional
-  Person({this.id, this.name, this.landLine, this.mobile, this.isDone = false});
+  Person({this.id, this.name, this.mobile, this.landLine,this.isDone = false});
 
 
   factory Person.fromDatabaseJson(Map<String, dynamic> data) => Person(
     //Factory method will be used to convert JSON objects that
     //are coming from querying the database and converting
-    //it into a Todo object
+    //it into a Contact object
 
     id: data['id'],
     name: data['name'],
-    landLine: data['landLine'],
     mobile: data['mobile'],
+    landLine: data['landLine'],
 
     //Since sqlite doesn't have boolean type for true/false,
     //we will use 0 to denote that it is false
